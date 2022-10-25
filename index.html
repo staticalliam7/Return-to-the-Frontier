@@ -7,19 +7,103 @@
   <title>Return to the Frontier</title>
   <link href="style/fonts/SwedenSansRegular.css" rel="stylesheet" type="text/css" />
      <link href="style/style.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
   <div class="topnav">
-  <a class="active" href="#home"><img src="images/RTTF-1.png" width="90"/></a>
+  <a class="active" href="#home"><img src="images/logo/RTTF-1.png" width="90"/></a>
   <a href="#news">Lore</a>
   <a href="#contact">Companies</a>
 
 </div>
+    <br>
+  
+    <!---  <center><img src="images/unknown (4).png"/></center>-->
+    <br>
+    <br>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
 
-  <script src="script.js"></script>
+  <!-- Full-width images with number and caption text -->
+<center>
+  <div class="mySlides fade">
+  <img src="images/unknown (1).png">
+  </div>
 
- 
+  <div class="mySlides fade">
+    <img src="images/unknown (2).png" >
+  </div>
+      <div class="mySlides fade">
+    <img src="images/unknown (3).png" >
+  </div>
+      <div class="mySlides fade">
+    <img src="images/unknown (4).png" >
+  </div>
+         <div class="mySlides fade">
+    <img src="images/unknown (5).png" >
+  </div>
+         <div class="mySlides fade">
+    <img src="images/unknown (6).png" >
+  </div>
+</center>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+    <br>
+    <br>
+    <center><img src="images/logo/RTTF-2.png" width="900"/></center>
+      <br>
+      <br>
+   
+      <br>
+     <center><h1>"We will return to the frontier stronger than ever."</h1></center>
+
+
+
+ <script>
+     let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+ </script>
 </body>
 
 </html>
